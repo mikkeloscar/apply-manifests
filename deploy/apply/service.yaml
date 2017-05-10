@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: test-apply-manifests
+  labels:
+    application: test-apply-manifests
+spec:
+  selector:
+    application: test-apply-manifests
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
